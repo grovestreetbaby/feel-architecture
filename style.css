@@ -1,0 +1,803 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+.logo a {
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    transition: opacity 0.3s ease; /* smooth fade */
+}
+
+.logo a:hover {
+    opacity: 0.7; /* subtle fade on hover */
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.7;
+}
+
+/* Sections (Philosophy / Expertise / any text section) */
+.section {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 40px;
+    text-align: center; /* center headings and text */
+}
+
+.section h2 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.section p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: justify; /* justify text for clean edges */
+    margin-bottom: 60px;
+}
+
+/* Services grid */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left; /* left-align each service box */
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Full-bleed service banners */
+.service-banner {
+    width: 100%;
+    height: 400px; /* adjust as desired */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+/* Optional subtle overlay for contrast */
+.service-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3); /* dark overlay for text readability */
+    z-index: 1;
+}
+
+/* Text overlay */
+.service-text {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.service-banner:hover {
+    transform: scale(1.02);
+    transition: transform 0.6s ease;
+}
+
+/* ===== NAVBAR ===== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: #000000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 50px;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+/* Push content below fixed navbar */
+body {
+    padding-top: 100px;
+}
+
+/* ===== ABOUT HERO ===== */
+
+.about-hero {
+    padding: 140px 20px 80px 20px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+}
+
+/* ===== ABOUT CONTENT ===== */
+
+.about-content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 40px 120px 40px;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.35rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* ===== TEAM SECTION ===== */
+
+.team {
+    padding: 120px 80px;
+    background: #f7f7f7;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 70px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* ===== TEAM SECTION ===== */
+
+.team-member img {
+    width: 100%;
+    max-width: 250px; /* optional, for uniform size */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px; /* subtle luxury feel */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.team-member span {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic; /* italicizes the role/title */
+}
+
+/* Full-width crew image */
+.team-crew {
+    width: 100%;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.team-crew img {
+    width: 100%;
+    height: 600px; /* adjust as needed */
+    object-fit: cover; /* crops nicely without distortion */
+    display: block;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Optional luxury hover effect */
+.team-crew img:hover {
+    transform: scale(1.03);
+    box-shadow: 25px 25px 50px rgba(0,0,0,0.12); /* bottom-right subtle shadow */
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 0.9rem;
+    color: #777;
+    /* subtle top border */
+    border-top: 1px solid #eaeaea;  /* same as navbar bottom */
+}
+
+/* ===== IMAGE GRIDS ===== */
+
+.image-section {
+    padding: 120px 80px;
+}
+
+.small-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 100px;
+}
+
+.small-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Two large images */
+
+.large-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.large-grid img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Full width spread */
+
+.full-spread img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Placeholder style (before adding real images) */
+
+.placeholder {
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* ===== INDEX HERO ===== */
+/* ===== HERO SECTION WITH BACKGROUND IMAGE ===== */
+
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+
+    /* Background image */
+    background-image: url('./img/tiffany.jpg'); /* <-- make sure path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Optional dark overlay for better text contrast */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35); /* Adjust darkness */
+    z-index: 1;
+}
+
+/* Text container */
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: #ffffff; /* Text color over image */
+}
+
+/* Hero text */
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin: auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.index-intro {
+    padding: 120px 40px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.index-intro p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* ===== INDEX IMAGE GRID ===== */
+
+/* ===== INDEX IMAGE GRID ===== */
+
+/* ===== INDEX IMAGE GRID ===== */
+
+/* ===== INDEX IMAGE GRID ===== */
+
+/* ===== INDEX IMAGE GRID ===== */
+
+/* ===== INDEX IMAGE GRID ===== */
+
+.index-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left large, right column */
+    gap: 30px;
+    padding: 120px 80px;
+}
+
+/* Left large image */
+.grid-item.large {
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item.large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.grid-item.large:hover img {
+    transform: scale(1.05);
+}
+
+/* Right column container */
+.grid-item.right-column {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /* Adjust number of rows for number of images */
+    gap: 30px;
+}
+
+/* Small images inside right column */
+.grid-item.right-column .small {
+    height: 280px; /* height of each small image */
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item.right-column .small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.grid-item.right-column .small:hover img {
+    transform: scale(1.05);
+}
+
+/* Full width spread */
+.full-spread img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin-top: 80px;
+    transition: transform 0.6s ease;
+}
+
+.full-spread img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 1024px) {
+    .index-grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-item.large {
+        height: 450px;
+    }
+    .grid-item.right-column .small {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p,
+    .index-intro p {
+        font-size: 1.2rem;
+    }
+    .index-grid {
+        padding: 80px 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .service-banner {
+        height: 300px;
+    }
+    .service-text {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-banner {
+        height: 200px;
+    }
+    .service-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Universal image hover zoom */
+.team-member img,
+.small-grid img,
+.large-grid img,
+.grid-item img {
+    transition: transform 0.6s ease;
+}
+
+.team-member img:hover,
+.small-grid img:hover,
+.large-grid img:hover,
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/prada.jpg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35); /* overlay for readability */
+    z-index: 1;
+}
+
+.contact-hero .hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.contact-hero h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin: auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Contact Form Section */
+.contact-section {
+    padding: 120px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-container {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #111;
+}
+
+.contact-form button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1 1 400px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-hero h1 {
+        font-size: 3rem;
+    }
+    .contact-hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Projects Hero Section */
+.projects-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/projects/11.jpg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+}
+
+.projects-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.projects-hero .hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.projects-hero h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+
+.projects-hero p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 120px 40px;
+}
+
+/* Individual project item */
+.project-item {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Square aspect ratio */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+/* Subtle scale on hover */
+.project-item:hover {
+    transform: scale(1.02);
+}
+
+/* Overlay */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0); /* transparent initially */
+    display: flex;
+    justify-content: flex-start; /* left-aligned text */
+    align-items: flex-end;       /* bottom of image */
+    padding: 20px;
+    transition: background-color 0.4s ease;
+}
+
+/* Text inside overlay */
+.project-text {
+    color: rgba(255,255,255,0); /* invisible initially */
+    transition: color 0.4s ease;
+}
+
+.project-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.project-text p {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Hover effects */
+.project-item:hover .project-overlay {
+    background-color: rgba(0,0,0,0.45); /* dark grey overlay */
+}
+
+.project-item:hover .project-text {
+    color: #ffffff; /* text appears on hover */
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+    .projects-hero h1 {
+        font-size: 3rem;
+    }
+    .projects-hero p {
+        font-size: 1.1rem;
+    }
+    .project-text h3 {
+        font-size: 1.2rem;
+    }
+    .project-text p {
+        font-size: 0.9rem;
+    }
+}
